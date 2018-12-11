@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:AI-starboy/AI-starboy.github.io.git
+	branch = master
