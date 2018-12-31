@@ -1,10 +1,10 @@
 baseurl = "/"
 languageCode = "zh-ch"
 title = "Bowen She ❤️ Shirong Liang"
-theme = "hugo-future-imperfect"
+theme = ""
 preserveTaxonomyNames = true
 paginate = 3
-disqusShortname = "shortname"
+disqusShortname = ""
 googleAnalytics = ""
 pluralizeListTitles = false
 # Set the followings to true as part of your site SEO
@@ -73,15 +73,15 @@ canonifyURLs = true
 # prefer to use. See Staticman.yml for additional settings.
 [params.staticman]
   # Sets Statiman to be active
-  staticman = false
+  staticman = true
   # Sets the location for Staticman to connect to
-  username  = ""
-  repo      = ""
-  branch    = ""
+  username  = "AI-starboy"
+  repo      = "AI-starboy.github.io"
+  branch    = "master"
 
   [params.staticman.recaptcha]
-    sitekey = "SITE_KEY"
-    secret  = "ENCRYPTED_SECRET"
+    sitekey = "6LdJFoAUAAAAAPx4dg-8N5lFci3Jm-QImDZ5aigC"
+    secret  = ""
 
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
@@ -94,7 +94,7 @@ canonifyURLs = true
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
   [params.intro.pic]
-    src       = "/img/avatar.jpg"
+    src       = "/img/main/avatar.jpg"
     # Sets Image to be a cirlce
     circle    = true
     # Sets Image to be Future Imperfect's hexagon
@@ -104,7 +104,7 @@ canonifyURLs = true
 
 [params.postAmount]
 # Sets the number of recent posts to show in the sidebar. The default value is 5.
-    sidebar = 3
+    sidebar = 4
 
 # Sets the menu items in the navigation bar
 # Identifier prepends a Font Awesome icon to the menu item
@@ -124,13 +124,13 @@ canonifyURLs = true
   name = "Blog"
   url = "/blog/"
   identifier = "fa fa-newspaper-o"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   name = "Itemized"
   url = "/itemized/"
   identifier = "fa fa-list"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Categories"
