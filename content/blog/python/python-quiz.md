@@ -51,4 +51,7 @@ print(names)
 16. How to print the clock time given the total seconds ```s```? (one-liner)
 
 17. Do you know how to do conversion between ascii code and string representation?
+
+18. What is the built-in functions to convert between ASCII numbers and characters?
+
 ```
