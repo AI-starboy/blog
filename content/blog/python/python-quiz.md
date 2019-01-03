@@ -54,4 +54,4 @@ print(names)
 
 18. What is the built-in functions to convert between ASCII numbers and characters?
 
-```
+19.  How do you determine if a character is a digit or not, is a letter or not?

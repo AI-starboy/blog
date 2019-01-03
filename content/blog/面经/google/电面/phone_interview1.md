@@ -1,7 +1,7 @@
 +++
 author = "Bowen She"
 categories = ["面经"]
-tags = ["狗家", "电面"]
+tags = ["狗家", "电面", "Iterator"]
 date = "2018-12-17"
 description = "一亩三分地Google电面整理 P1"
 featured = "google-01.png"
@@ -417,52 +417,69 @@ def profitableSchemes(self, G, P, group, profit):
 
 ---
 问知不知道二叉树，给一个二叉树根结点，现在知道这个二叉树不合法，原因是有一条多余的边，让删除这条边。比如，
+
+```
      A
    /  \
   B    C
 /  \ /  
 D    E
+```
 
-上面的树连接情况是这样：A->B, A->C, B->D, C->E, B->E
+上面的树连接情况是这样：A -> B, A -> C, B -> D, C -> E, B -> E
 
-
-那么删除C->E or B->E 都是可以的。
+那么删除C -> E or B -> E 都是可以的。
 注意：这里只给root结点，跟LC某道带edge的题不太一样。
 
 Follow up:
+
 现在换成带val的BST了，要求删掉多余那一条边之后，仍然保证是BST。
+
 ---
-https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=465117&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline
-上来先是问了半个小时的问题，问了以前做的项目，还问了api, ml, 为什么要申请这个职位，最喜欢的编程语言，为什么这个语言？. From 1point 3acres bbs
+🚩 [原帖](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=465117&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline)
+
+问了以前项目的api， ml
+
+BQ：
+1. 为什么申请这个职位
+2. 最喜欢的编程语言， 为什么是这个语言？
 
 
-算法题目：爱奇艺。
+算法题目：🔗 [Leetcode 271](https://leetcode.com/problems/encode-and-decode-strings/description/)
 
-我用特殊符号做的。
+Solution:
+
+特殊符号， 比如‘#’作delimiter
 
 Followup：如果不用特殊符号，怎么做？
 
-就不设积分隐藏了，攒点人品，希望大家给加点米！拖了2-3个月才敢电面，求onsite！！
+对每个字符串这样编码： 字符串长度+‘ &nbsp; ’+原字符串（用字符串长度规定切割位置， 用空格或其它非数字字符作长度与原字符串的分割符）
+
 ---
-https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=465117&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline
-上来先是问了半个小时的问题，问了以前做的项目，还问了api, ml, 为什么要申请这个职位，最喜欢的编程语言，为什么这个语言？. From 1point 3acres bbs
+🚩 [原帖](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=464930&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline)
 
+ 给出两个比特流，一个短，一个长，要求在长的里搜索匹配短的。一开始有点蒙，后来在提示下想到转化成字符串，但是由长度不是八的整数倍，觉得很复杂，没有写完。估计挂了。
 
-算法题目：271。
+ KMP?
 
-我用特殊符号做的。
+Boyce Morle?
 
-Followup：如果不用特殊符号，怎么做？
-
-就不设积分隐藏了，攒点人品，希望大家给加点米！拖了2-3个月才敢电面，求onsite！！
----
-https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=464930&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline
- 给出两个比特流，一个短，一个长，要求在长的里搜索匹配短的。一开始有点蒙，后来在提示下想到转化成字符窜，但是由长度不是八的整数倍，觉得很复杂，没有写完。估计桂了。
+ Rabin Carp?
 
  ---
 
- https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=464676&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline
- 很简单的一道题， Run Length Decoder.
+ 🚩 [原帖](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=464676&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D1%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26searchoption%5B3109%5D%5Bvalue%5D%3D2%26searchoption%5B3109%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline)
+
+算法题目：🔗 [Leetcode 443](https://leetcode.com/problems/string-compression/description/)
+
+Run Length Decoder
+
 给一个encode过的int array， 其实就是compress过的， 比如 【1，1，1，2，2，3】 -》 【3，1，2，2，1，3】.  Generally, [a,a,a,b,c,c] - > [3,a,1,b,2,c]
+
 写一个decoder， 把compress的array转换回去。
-follow up 是decode完的array可能超出memory，所以要写写一个 Run length Iterator, 有hasNext() and next() 这两个function
+
+Follow up:
+
+🔗 [Leetcode 604](https://leetcode.com/problems/design-compressed-string-iterator/description/)
+
+decode完的array可能超出memory，所以要写写一个 Run length Iterator, 有hasNext() and next() 这两个function
